@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/utils/basePath";
 import { gsap } from "gsap";
 import { Menu, X } from "lucide-react";
 import { navigation, contact } from "@/config/site";
@@ -76,7 +77,7 @@ export function Navbar() {
             style={{ position: "relative", width: 120, height: 36, flexShrink: 0, opacity: 0.92, cursor: "pointer", background: "none", border: "none" }}
             aria-label="Liivv Beauty"
           >
-            <Image src="/logo/liivv.svg" alt="Liivv Beauty" fill style={{ objectFit: "contain", objectPosition: "left" }} priority />
+            <Image src={asset("/logo/liivv.svg")} alt="Liivv Beauty" fill style={{ objectFit: "contain", objectPosition: "left" }} priority />
           </button>
 
           {/* Desktop links */}
@@ -145,7 +146,7 @@ export function Navbar() {
         }}>
           <div className="wrap" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <div style={{ position: "relative", width: 120, height: 36, opacity: 0.92 }}>
-              <Image src="/logo/liivv.svg" alt="Liivv Beauty" fill style={{ objectFit: "contain", objectPosition: "left" }} />
+              <Image src={asset("/logo/liivv.svg")} alt="Liivv Beauty" fill style={{ objectFit: "contain", objectPosition: "left" }} />
             </div>
             <button
               onClick={() => setOpen(false)}

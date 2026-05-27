@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/utils/basePath";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Heart } from "lucide-react";
@@ -46,7 +47,7 @@ export function Footer() {
           {/* Brand */}
           <div className="footer-col footer-brand" style={{ gridColumn: "span 1", display: "flex", flexDirection: "column", gap: 16, maxWidth: 260 }}>
             <div style={{ position: "relative", width: 110, height: 32 }}>
-              <Image src="/logo/liivv.svg" alt="Liivv Beauty" fill style={{ objectFit: "contain", objectPosition: "left" }} />
+              <Image src={asset("/logo/liivv.svg")} alt="Liivv Beauty" fill style={{ objectFit: "contain", objectPosition: "left" }} />
             </div>
             <p style={{ fontSize: "0.82rem", color: "rgba(250,247,245,0.4)", fontFamily: "var(--font-body)", lineHeight: 1.7 }}>
               Salão de beleza corporativo que une sofisticação, agilidade e excelência para a mulher que lidera.
