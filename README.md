@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Liivv Beauty — Site Institucional
 
-## Getting Started
+Site institucional premium para o **Liivv Beauty**, salão de beleza corporativo localizado no Complexo Rochavera, São Paulo.
 
-First, run the development server:
+## Stack Tecnológica
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Tecnologia | Finalidade |
+|---|---|
+| **Next.js 16** (App Router) | Framework React com SSG/SSR |
+| **TypeScript** | Type safety completo |
+| **TailwindCSS** | Estilização utility-first |
+| **GSAP + ScrollTrigger** | Animações cinematográficas |
+| **Cormorant Garamond** | Tipografia de display premium |
+| **Inter** | Tipografia de corpo profissional |
+| **Lucide React** | Ícones |
+
+## Paleta de Cores
+
+```
+Brand Peach:   #FEBDAB  ← Cor principal da logo
+Brand Gold:    #C9A882
+Dark BG:       #0A0907
+Dark Surface:  #120E0B
+Dark Card:     #1A1410
+Text Primary:  #FAF7F5
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rodando localmente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Abra http://localhost:3000 no navegador.
 
-## Learn More
+## Build de produção
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Variáveis de Ambiente
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+cp .env.example .env.local
+```
 
-## Deploy on Vercel
+Configure o número de WhatsApp e demais variáveis em `src/config/site.ts`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Personalização Rápida
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| O que mudar | Onde mudar |
+|---|---|
+| Contato / WhatsApp | `src/config/site.ts` |
+| Serviços | `src/data/services/index.ts` |
+| Depoimentos | `src/data/testimonials/index.ts` |
+| Stats / Timeline / FAQ | `src/data/content/index.ts` |
+| Cores | `tailwind.config.ts` + `src/app/globals.css` |
+| Logo | `public/logo/liivv.svg` |
